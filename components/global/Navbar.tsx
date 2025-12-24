@@ -60,25 +60,25 @@ export default function Navbar() {
                                 <div className="absolute top-full mt-2 w-56 bg-black/70 backdrop-blur-sm rounded-md shadow-lg">
                                     <Link
                                         href="/projects/library-management"
-                                        className="block px-4 py-2 hover:bg-gray-800/70 rounded-t-md"
+                                        className="block px-4 py-2 hover:bg-purple-950 rounded-t-md"
                                     >
                                         Library Management
                                     </Link>
                                     <Link
                                         href="/projects/portfolio"
-                                        className="block px-4 py-2 hover:bg-gray-800/70"
+                                        className="block px-4 py-2 hover:bg-purple-950"
                                     >
                                         Portfolio
                                     </Link>
                                     <Link
                                         href="/projects/mathematics-helper"
-                                        className="block px-4 py-2 hover:bg-gray-800/70"
+                                        className="block px-4 py-2 hover:bg-purple-950"
                                     >
                                         Mathematics helper
                                     </Link>
                                     <Link
                                         href="/projects/hotel-management"
-                                        className="block px-4 py-2 hover:bg-gray-800/70 rounded-b-md"
+                                        className="block px-4 py-2 hover:bg-purple-950 rounded-b-md"
                                     >
                                         Hotel management
                                     </Link>

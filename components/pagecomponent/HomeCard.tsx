@@ -2,64 +2,70 @@
 import Image from "next/image";
 
 export const classNames = {
-    cardparent_divisions: "w-1/2 flex justify-center flex-col items-center p-10 pl-20 cursor-default",
+    cardparent_divisions: "w-full md:w-1/2 flex justify-center flex-col items-center p-4 md:p-10 md:pl-20 cursor-default",
     cardparent_division_h1: "text-4xl text-center underline",
     cardparent_division_p: "text-left",
     textGlowEffect: "transition-all duration-300 ease-in-out hover:filter hover:drop-shadow-[0_0_8px_rgba(124,58,237,2.0)]",
-    spanText: "underline font-bold",
-    cardparent_list: "",
+    spanText: "font-bold",
+    cardparent_list: "list-disc list-inside",
     cardparent_list_span: "font-bold",
 };
 
 export default function HomeCard() {
     return (
         <div className="homecard">
-            <div className="cardparent flex flex-row items-center">
+            <div className="cardparent flex flex-col md:flex-row items-center justify-center h-full">
                 <div className={`${classNames.cardparent_divisions}`}>
                     <h1
                         className={`${classNames.cardparent_division_h1} ${classNames.textGlowEffect}`}
                     >
-                        This is Daksh Singh
+                        Hi, I&apos;m Daksh Singh
                     </h1>{" "}
                     <br />
                     <p className={classNames.cardparent_division_p}>
-                        Hey Everyone, I am &nbsp;
-                        <span
-                            className={`${classNames.spanText} ${classNames.textGlowEffect}`}
-                        >
-                            Daksh Singh
-                        </span>
-                        . Currently on a gap year from college. Not in any
-                        college at the moment. I took this year in order to gain
-                        some good valueable skills, before I join any college.
-                        Currently I&apos;m good at Programming Languages, Java
-                        and Python, both for Data Structure and Algorithms and
-                        console
+                        <span className={`${classNames.spanText} ${classNames.textGlowEffect}`}>Hey Everyone</span>, <br /> I currenty am taking a
+                        gap year after Class 12 to build strong skills before
+                        college. This year, I&apos;ve been focusing on learning
+                        programming and problem-solving to create a solid
+                        foundation in computer science. I work with Java and
+                        Python, primarily for data structures, algorithms, and
+                        console-based projects, and I&apos;m also exploring
+                        JavaScript as I move toward web development
                     </p>
                     <br />
-                    <ul className={classNames.cardparent_list} style={{ listStyle: "disc" }}>
-                        <li>
+                    <ul
+                        className={classNames.cardparent_list}
+                    >
+                        <li className="flex flex-col md:flex-row mb-2">
                             <span
-                                className={`${classNames.cardparent_list_span} ${classNames.textGlowEffect}`}
+                                className={`${classNames.cardparent_list_span} ${classNames.textGlowEffect} md:w-1/4 md:pr-4`}
                             >
-                                Java
-                            </span>{" "}
-                            - I learnt Java programming language when I was in
-                            8th Standard
+                                Java:
+                            </span>
+                            <span className="md:w-3/4">
+                                I learnt Java programming language when I was in
+                                8th Standard
+                            </span>
                         </li>
-                        <li>
+                        <li className="flex flex-col md:flex-row mb-2">
                             <span
-                                className={`${classNames.cardparent_list_span} ${classNames.textGlowEffect}`}
+                                className={`${classNames.cardparent_list_span} ${classNames.textGlowEffect} md:w-1/4 md:pr-4`}
                             >
-                                Python
-                            </span>{" "}
-                            - I learnt Python programming language afterwards.
+                                Python:
+                            </span>
+                            <span className="md:w-3/4">
+                                I learnt Python programming language afterwards.
+                            </span>
                         </li>
-                        <li>
-                            <span className={`${classNames.cardparent_list_span} ${classNames.textGlowEffect}`}>
-                                JavaScript
-                            </span>{" "}
-                            - Currently Learning
+                        <li className="flex flex-col md:flex-row">
+                            <span
+                                className={`${classNames.cardparent_list_span} ${classNames.textGlowEffect} md:w-1/4 md:pr-4`}
+                            >
+                                JavaScript:
+                            </span>
+                            <span className="md:w-3/4">
+                                Currently Learning
+                            </span>
                         </li>
                     </ul>
                 </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Oxanium } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/global/Navbar";
 
@@ -7,6 +7,11 @@ const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
 });
+
+const oxanium = Oxanium({
+    subsets: ["latin"],
+    variable: "--font-oxanium",
+})
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
@@ -21,9 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased pt-28`}
-            >
+            <body className={` ${oxanium.variable} ${geistSans.variable} ${geistMono.variable} antialiased pt-28`} >
                 <Navbar />
                 {children}
             </body>

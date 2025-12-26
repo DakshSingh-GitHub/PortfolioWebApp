@@ -5,15 +5,23 @@ interface CardProps {
     image: string;
     text: string;
     paragraph: string;
+    details: string[];
 }
 
-export default function ProjectCards({ image, text, paragraph }: CardProps ) {
+export default function ProjectCards({ image, text, paragraph, details }: CardProps ) {
     return (
         <div className={`${classNames.card} w-full max-w-[80%] mx-auto h-87.5 cursor-default flex flex-col md:flex-row`}>
             <div className="p-4 md:w-1/2 flex flex-col justify-center">
                 <h1 className="text-center mb-4 text-xl">{text}</h1>
                 <hr className="mt-4 mb-4" />
                 <p className="text-center text-wrap">{paragraph}</p>
+                <ul>
+                    {details.map((detail, index) => (
+                        <li key={index} className="text-center text-wrap list-disc list-inside">
+                            {detail}
+                        </li>
+                    ))}
+                </ul>
             </div>
             <div className="md:w-1/2">
                 <Image

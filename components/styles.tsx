@@ -6,5 +6,5 @@ export const classNames = {
     spanText: "font-bold",
     cardparent_list: "list-disc list-inside",
     cardparent_list_span: "font-bold",
-    card: "border-2 border-black rounded-lg m-4 transition-all duration-300 ease-in-out hover:shadow-[0_10px_20px_rgba(139,_92,_246,_0.7)] overflow-hidden",
+    card: "border-2 border-black rounded-lg m-4 transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(139,_92,_246,_0.5)] overflow-hidden",
 };

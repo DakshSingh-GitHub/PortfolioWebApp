@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     const textGlowEffect =
@@ -7,21 +7,21 @@ export default function Footer() {
 
     const socialLinks = [
         {
-            href: "https://github.com/dakshsinghrathore",
+            href: "https://github.com/DakshSingh-GitHub",
             icon: <FaGithub size={24} />,
         },
         {
-            href: "https://linkedin.com/in/daksh-singh-rathore",
+            href: "https://www.linkedin.com/in/daksh-singh-116566331/",
             icon: <FaLinkedin size={24} />,
         },
         {
-            href: "https://twitter.com/daksh_786",
-            icon: <FaTwitter size={24} />,
+            href: "https://www.instagram.com/dtlz_564",
+            icon: <FaInstagram size={24} />,
         },
     ];
 
     return (
-        <footer className="bg-black/50 text-white backdrop-blur-sm border-t border-gray-700/50 mt-10">
+        <footer className="bg-black/50 text-white backdrop-blur-sm border-t border-gray-700/50 transition-shadow duration-300 ease-in-out hover:shadow-[0_10px_25px_-5px_rgba(76,5,119,0.4)] mt-10">
             <div className="container mx-auto px-6 py-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-4 md:mb-0">

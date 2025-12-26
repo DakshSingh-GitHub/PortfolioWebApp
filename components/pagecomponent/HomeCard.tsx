@@ -14,7 +14,7 @@ export default function HomeCard() {
                         Hi, I&apos;m Daksh Singh
                     </h1>{" "}
                     <br />
-                    <p className={classNames.cardparent_division_p}>
+                    <p className={`${classNames.cardparent_division_p} font-sans`}>
                         <span className={`${classNames.spanText} ${classNames.textGlowEffect}`}>Hey Everyone</span>, <br /> I  am currently taking a
                         gap year after Class 12 to build strong skills before
                         college. This year, I&apos;ve been focusing on learning

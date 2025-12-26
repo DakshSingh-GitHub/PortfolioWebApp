@@ -50,16 +50,20 @@ export default function Home() {
                     Brief about my Education
                 </h1>
                 <div className="flex flex-col md:flex-row items-center justify-evenly h-full w-full mt-10">
-                    <Card
-                        image="/schl.jpg"
-                        text="Shri Gulab Rai Montessori School"
-                        paragraph={DescriptionString.school}
-                        board={true}
-                    />
+                    <Link href="https://grmschool.com/Default.aspx">
+                        <Card
+                            image="/schl.jpg"
+                            text="Shri Gulab Rai Montessori School"
+                            paragraph={DescriptionString.school}
+                            board={true}
+                        />
+                    </Link>
                 </div>
             </div>
             <div className="mt-10">
-                <h1 className={`text-center text-4xl underline ${classNames.textGlowEffect}`}>
+                <h1
+                    className={`text-center text-4xl underline ${classNames.textGlowEffect}`}
+                >
                     I&apos;ve Worked On
                 </h1>
                 <div className="flex flex-col items-center mt-10 w-full">

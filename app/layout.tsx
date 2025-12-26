@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oxanium } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/global/Navbar";
+import Footer from "@/components/global/Footer";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <body className={` ${oxanium.variable} ${geistSans.variable} ${geistMono.variable} antialiased pt-28`} >
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );

@@ -8,7 +8,7 @@ interface CardProps { image: string; text: string; paragraph: string; board:bool
 export default function Card( { image, text, paragraph, board }: CardProps ) {
     return (
         <div
-            className={`${classNames.card} w-97.5 h-135 cursor-default border-purple-500/30 bg-gray-900/50  hover:shadow-purple-500/50 hover:border-purple-500`}
+            className={`${classNames.card} w-full md:w-97.5 h-auto md:h-140 cursor-default border-purple-500/30 bg-gray-900/50  hover:shadow-purple-500/50 hover:border-purple-500`}
         >
             <Image
                 src={image}
@@ -28,7 +28,7 @@ export default function Card( { image, text, paragraph, board }: CardProps ) {
                 <p className="mt-4 text-center">{paragraph}</p>
             </div>
             {board ? (
-                <ul className="text-center">
+                <ul className="text-center p-4">
                     <h1
                         className={`font-bold mb-3 text-xl ${classNames.textGlowEffect}`}
                     >

@@ -63,7 +63,7 @@ export default function HomeCard() {
                 </div>
                 <div className={classNames.cardparent_divisions}>
                     <Image
-                        src="/daksh.jpg"
+                        src="./daksh.jpg"
                         width={350}
                         height={350}
                         alt="Daksh Singh"

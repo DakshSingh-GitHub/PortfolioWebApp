@@ -7,4 +7,6 @@ export const classNames = {
     cardparent_list: "list-disc list-inside",
     cardparent_list_span: "font-bold",
     card: "border-2 border-black rounded-lg m-4 transition-all duration-300 ease-in-out hover:shadow-[0_0_20px_rgba(139,_92,_246,_0.5)] overflow-hidden",
+
+    aboutHeader: "text-5xl font-bold mb-6 text-center",
 };

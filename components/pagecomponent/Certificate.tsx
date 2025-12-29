@@ -31,7 +31,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
                     <p className="text-sm text-gray-500">{date}</p>
                     <div className="flex items-center mt-4">
                         <Image
-                            src="/file.svg"
+                            src="./file.svg"
                             alt="File Icon"
                             width={20}
                             height={20}

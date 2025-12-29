@@ -56,7 +56,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-10 bg-black/50 text-white backdrop-blur-sm border-b border-gray-700/50 transition-shadow duration-300 ease-in-out hover:shadow-[0_10px_25px_-5px_rgba(76,5,119,0.8)] hover:border-purple-500">
+        <nav className="fixed top-0 left-0 right-0 z-10 bg-black/50 text-white backdrop-blur-sm border-b border-purple-700/50 transition-shadow duration-300 ease-in-out hover:shadow-[0_10px_25px_-5px_rgba(76,5,119,0.8)] hover:border-purple-500">
             <div className="container mx-auto px-6 py-6">
                 <div className="flex justify-between items-center">
                     <Link

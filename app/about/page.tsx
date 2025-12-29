@@ -10,6 +10,7 @@ import {
     FaWhatsapp,
     FaDiscord,
 } from "react-icons/fa";
+import Certificate from "@/components/pagecomponent/Certificate";
 
 const schoolList = [
     {
@@ -111,7 +112,7 @@ export default function AboutPage() {
                 </div>
             </div>
             <hr />
-            <div className="schoolList mt-10 px-2 md:px-0">
+            <div className="schoolList mt-10 px-2 md:px-0 mb-10">
                 <h1
                     className={`${classNames.aboutHeader} ${classNames.textGlowEffect}`}
                 >
@@ -119,6 +120,17 @@ export default function AboutPage() {
                 </h1>
                 <div className="flex flex-col md:flex-row items-center justify-evenly h-full w-full mt-10 gap-4 md:gap-0">
                     {schoolMap}
+                </div>
+            </div>
+            <hr />
+            <div className="mt-10 px-2 md:px-0">
+                <h1
+                    className={`${classNames.aboutHeader} ${classNames.textGlowEffect}`}
+                >
+                    Certifications of Mine...
+                </h1>
+                <div className="flex flex-col md:flex-row items-center justify-evenly h-full w-full mt-10 gap-4 md:gap-0">
+                    <Certificate />
                 </div>
             </div>
         </div>

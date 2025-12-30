@@ -200,7 +200,7 @@ export default function Navbar() {
                             )}
                         </div>
                         <Link
-                            href="/contact"
+                            href="/contact-me"
                             className={`block py-2 ${textGlowEffect}`}
                             onClick={() => setIsMobileMenuOpen(false)}
                         >

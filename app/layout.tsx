@@ -20,8 +20,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Meet Daksh Singh",
+    title: "Meet Daksh Singh | Student",
     description: "Portfolio Website that has been made by me, Daksh Singh, to showcase my profile",
+    icons: {
+        icon: "./daksh/daksh-logo.png",
+    },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

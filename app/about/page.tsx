@@ -15,7 +15,7 @@ import Certificate from "@/components/pagecomponent/Certificate";
 const schoolList = [
     {
         name: "Shri Gulab Rai Montessori School",
-        image: "./schl.jpg",
+        image: "./education/schl.jpg",
         desc: "Secondary and Senior Secondary Education from Shri Gulab Rai Montessori school",
         href: "https://grmschool.com/Default.aspx",
         key: 0,

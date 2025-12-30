@@ -103,7 +103,7 @@ export default function Navbar() {
                             )}
                         </div>
                         <Link
-                            href="/contact"
+                            href="/contact-me"
                             className={`hover:text-gray-300 ${textGlowEffect}`}
                         >
                             Contact

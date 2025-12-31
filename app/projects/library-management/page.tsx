@@ -37,7 +37,7 @@ export default function LibraryManagementPage() {
             <div className="flex justify-center my-10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/projects/library_management.png"
+                    src="https://drive.google.com/file/d/16h6GtimUiAKDmpKGbgPhr6iBeqsud-RD/view"
                     alt="Library Management System CLI"
                     width={800}
                     height={450}

@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 import "../../markdown.css";
 
 export default function LibraryManagementPage() {
@@ -33,7 +32,7 @@ export default function LibraryManagementPage() {
 
             <div className="flex justify-center my-10">
                 <Image
-                    src="/projects/library_management.png"
+                    src="./projects/library_management.png"
                     alt="Library Management System CLI"
                     width={800}
                     height={450}
@@ -180,7 +179,6 @@ export default function LibraryManagementPage() {
                 <div className="markdown-container">
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
-                        rehypePlugins={[rehypeRaw]}
                     >
                         {readmeContent}
                     </ReactMarkdown>

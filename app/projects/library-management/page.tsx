@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import "../../markdown.css";
 
 export default function LibraryManagementPage() {
@@ -44,7 +45,7 @@ export default function LibraryManagementPage() {
                 className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
             >
                 <h2
-                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}}`}
+                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
                 >
                     Project Overview
                 </h2>
@@ -177,7 +178,10 @@ export default function LibraryManagementPage() {
                     README.md for LIBRARY MANAGEMENT
                 </h2>
                 <div className="markdown-container">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw]}
+                    >
                         {readmeContent}
                     </ReactMarkdown>
                 </div>

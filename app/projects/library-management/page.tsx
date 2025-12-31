@@ -1,14 +1,9 @@
 "use client";
 
 import { classNames } from "@/components/styles";
-// import Image from "next/image";
-
-
-import "../../markdown.css";
+import Image from "next/image";
 
 export default function LibraryManagementPage() {
-
-
     return (
         <div className="container mx-auto px-6 py-4 text-white">
             <header className="text-center my-12">
@@ -22,6 +17,13 @@ export default function LibraryManagementPage() {
                     operations.
                 </p>
             </header>
+            <Image
+                src="../projects/library_management.png"
+                alt="Library Management"
+                height={200}
+                width={600}
+                className={`rounded-4xl mx-auto mt-10 border-4 border-purple-500/50 shadow-lg shadow-purple-500/20 ${classNames.textGlowEffect} hover:border-purple-500`}
+            />
 
             <div
                 className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
@@ -293,112 +295,317 @@ export default function LibraryManagementPage() {
                 <h2
                     className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
                 >
-                    API & Method Reference: Unpacking the System&apos;s Core Logic
+                    API & Method Reference: Unpacking the System&apos;s Core
+                    Logic
                 </h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                    This section provides an in-depth breakdown of the Library Management System&apos;s programmatic interface, detailing each critical function available through its controllers. Organized by their respective functional areas, these methods expose the granular control and operational capabilities that underpin the entire application.
+                    This section provides an in-depth breakdown of the Library
+                    Management System&apos;s programmatic interface, detailing
+                    each critical function available through its controllers.
+                    Organized by their respective functional areas, these
+                    methods expose the granular control and operational
+                    capabilities that underpin the entire application.
                 </p>
 
                 {/* Admin Controller */}
-                <h3 className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}>
-                    Admin Controller (`controllers/admin_controller/admin_controller.py`)
+                <h3
+                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                >
+                    Admin Controller
+                    (`controllers/admin_controller/admin_controller.py`)
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed mb-3">
-                    The `admin_controller.py` module houses functions responsible for the secure management of system users. These methods provide administrators with the tools necessary to control access, define roles, and maintain user credentials within the system.
+                    The `admin_controller.py` module houses functions
+                    responsible for the secure management of system users. These
+                    methods provide administrators with the tools necessary to
+                    control access, define roles, and maintain user credentials
+                    within the system.
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
                     <li>
-                        <strong>`add_users(username)`:</strong> This function is invoked to onboard new administrative or staff users into the system. It first performs a crucial check to determine if the provided `username` already exists. If the username is unique, the system then interactively prompts the administrator to input the new user&apos;s full name, a secure password, their designated role (e.g., &apos;admin&apos;, &apos;staff&apos;), and any additional descriptive notes. Upon successful collection of this data, the new user&apos;s details are securely appended to the `users.bin` file, ensuring persistent storage.
+                        <strong>`add_users(username)`:</strong> This function is
+                        invoked to onboard new administrative or staff users
+                        into the system. It first performs a crucial check to
+                        determine if the provided `username` already exists. If
+                        the username is unique, the system then interactively
+                        prompts the administrator to input the new user&apos;s
+                        full name, a secure password, their designated role
+                        (e.g., &apos;admin&apos;, &apos;staff&apos;), and any
+                        additional descriptive notes. Upon successful collection
+                        of this data, the new user&apos;s details are securely
+                        appended to the `users.bin` file, ensuring persistent
+                        storage.
                     </li>
                     <li>
-                        <strong>`view_users()`:</strong> Designed for oversight, this method allows administrators to comprehensively review all registered users. It retrieves the list of users from the `users.bin` file and then systematically iterates through each user record, neatly printing their `username`, `name`, `role`, and any associated `note`. This provides a clear snapshot of current system access.
+                        <strong>`view_users()`:</strong> Designed for oversight,
+                        this method allows administrators to comprehensively
+                        review all registered users. It retrieves the list of
+                        users from the `users.bin` file and then systematically
+                        iterates through each user record, neatly printing their
+                        `username`, `name`, `role`, and any associated `note`.
+                        This provides a clear snapshot of current system access.
                     </li>
                     <li>
-                        <strong>`delete_user(username)`:</strong> This function facilitates the removal of a user from the system. When a `username` is supplied, the method searches for the corresponding user record. If found, the user&apos;s entry is permanently removed, and a success message is displayed. If the `username` does not match an existing record, a &quot;not found&quot; message is returned, preventing erroneous deletions.
+                        <strong>`delete_user(username)`:</strong> This function
+                        facilitates the removal of a user from the system. When
+                        a `username` is supplied, the method searches for the
+                        corresponding user record. If found, the user&apos;s
+                        entry is permanently removed, and a success message is
+                        displayed. If the `username` does not match an existing
+                        record, a &quot;not found&quot; message is returned,
+                        preventing erroneous deletions.
                     </li>
                     <li>
-                        <strong>`check_if_user(username)`:</strong> A utility function that serves as a predicate for user existence. It takes a `username` as input and efficiently queries the stored user data. It returns `True` if a user with that `username` is found, indicating their presence in the system, and `False` otherwise.
+                        <strong>`check_if_user(username)`:</strong> A utility
+                        function that serves as a predicate for user existence.
+                        It takes a `username` as input and efficiently queries
+                        the stored user data. It returns `True` if a user with
+                        that `username` is found, indicating their presence in
+                        the system, and `False` otherwise.
                     </li>
                     <li>
-                        <strong>`check_role(username)`:</strong> This method is used to ascertain the authorization level of a specific user. Given a `username`, it retrieves the assigned `role` (e.g., &apos;admin&apos;, &apos;staff&apos;) for that user. If the user exists, their role string is returned; otherwise, `None` is returned, signifying that the user was not found.
+                        <strong>`check_role(username)`:</strong> This method is
+                        used to ascertain the authorization level of a specific
+                        user. Given a `username`, it retrieves the assigned
+                        `role` (e.g., &apos;admin&apos;, &apos;staff&apos;) for
+                        that user. If the user exists, their role string is
+                        returned; otherwise, `None` is returned, signifying that
+                        the user was not found.
                     </li>
                     <li>
-                        <strong>`edit_user(username_to_edit)`:</strong> This powerful function enables administrators to modify the details of an existing user. Upon providing a `username_to_edit`, the system prompts for new values for the user&apos;s name, password, role, and a descriptive note. A key feature is its flexibility: leaving any prompt blank ensures that the current value for that specific field remains unchanged, allowing for partial updates.
+                        <strong>`edit_user(username_to_edit)`:</strong> This
+                        powerful function enables administrators to modify the
+                        details of an existing user. Upon providing a
+                        `username_to_edit`, the system prompts for new values
+                        for the user&apos;s name, password, role, and a
+                        descriptive note. A key feature is its flexibility:
+                        leaving any prompt blank ensures that the current value
+                        for that specific field remains unchanged, allowing for
+                        partial updates.
                     </li>
                     <li>
-                        <strong>`_load_users()` (Internal):</strong> This is a crucial internal helper function, prefixed with an underscore to indicate its intended private use within the module. Its primary responsibility is to safely load the serialized list of user data from the `users.bin` file using Python&apos;s `pickle` module. In scenarios where the file does not exist or has become corrupted, it gracefully returns an empty list, preventing application crashes.
+                        <strong>`_load_users()` (Internal):</strong> This is a
+                        crucial internal helper function, prefixed with an
+                        underscore to indicate its intended private use within
+                        the module. Its primary responsibility is to safely load
+                        the serialized list of user data from the `users.bin`
+                        file using Python&apos;s `pickle` module. In scenarios
+                        where the file does not exist or has become corrupted,
+                        it gracefully returns an empty list, preventing
+                        application crashes.
                     </li>
                     <li>
-                        <strong>`_save_users(users_data)` (Internal):</strong> Another internal helper function, `_save_users` is dedicated to persisting the current state of user data. It accepts `users_data` (typically a list of user objects) and serializes this data into the `users.bin` file using the `pickle` module, thereby ensuring that all user modifications are securely saved across application sessions.
+                        <strong>`_save_users(users_data)` (Internal):</strong>{" "}
+                        Another internal helper function, `_save_users` is
+                        dedicated to persisting the current state of user data.
+                        It accepts `users_data` (typically a list of user
+                        objects) and serializes this data into the `users.bin`
+                        file using the `pickle` module, thereby ensuring that
+                        all user modifications are securely saved across
+                        application sessions.
                     </li>
                 </ul>
 
                 {/* Reception Controller - Book Management */}
-                <h3 className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}>
-                    Reception Controller: Book Management (`controllers/reception_controller/book_controller.py`)
+                <h3
+                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                >
+                    Reception Controller: Book Management
+                    (`controllers/reception_controller/book_controller.py`)
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed mb-3">
-                    The `book_controller.py` module provides a comprehensive set of functions for managing the library&apos;s physical collection. These methods allow staff to maintain an accurate and up-to-date catalog of all books, from acquisition to eventual removal.
+                    The `book_controller.py` module provides a comprehensive set
+                    of functions for managing the library&apos;s physical
+                    collection. These methods allow staff to maintain an
+                    accurate and up-to-date catalog of all books, from
+                    acquisition to eventual removal.
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
                     <li>
-                        <strong>`add_book(connection, book_name, book_author, book_genre, book_publication_year, book_issue_rate, book_quantity)`:</strong> This function is fundamental for expanding the library&apos;s collection. It requires a database `connection` object and accepts detailed parameters for a new book: `book_name`, `book_author`, `book_genre`, `book_publication_year`, the `book_issue_rate` (cost per day for borrowing), and `book_quantity` (the total number of copies acquired). These details are then meticulously inserted into the `books` table in the MySQL database.
+                        <strong>
+                            `add_book(connection, book_name, book_author,
+                            book_genre, book_publication_year, book_issue_rate,
+                            book_quantity)`:
+                        </strong>{" "}
+                        This function is fundamental for expanding the
+                        library&apos;s collection. It requires a database
+                        `connection` object and accepts detailed parameters for
+                        a new book: `book_name`, `book_author`, `book_genre`,
+                        `book_publication_year`, the `book_issue_rate` (cost per
+                        day for borrowing), and `book_quantity` (the total
+                        number of copies acquired). These details are then
+                        meticulously inserted into the `books` table in the
+                        MySQL database.
                     </li>
                     <li>
-                        <strong>`edit_book(connection, book_id)`:</strong> Designed for accuracy and maintenance, this function allows for granular modification of an existing book&apos;s details. Given a database `connection` and a unique `book_id`, it first retrieves the book&apos;s current information. The user is then presented with options to select which specific field (e.g., name, author, genre) they wish to alter. Upon selection, the method prompts for the new value and updates the corresponding record in the `books` table.
+                        <strong>`edit_book(connection, book_id)`:</strong>{" "}
+                        Designed for accuracy and maintenance, this function
+                        allows for granular modification of an existing
+                        book&apos;s details. Given a database `connection` and a
+                        unique `book_id`, it first retrieves the book&apos;s
+                        current information. The user is then presented with
+                        options to select which specific field (e.g., name,
+                        author, genre) they wish to alter. Upon selection, the
+                        method prompts for the new value and updates the
+                        corresponding record in the `books` table.
                     </li>
                     <li>
-                        <strong>`find_book_information(connection)`:</strong> This is a powerful discovery tool that enables users to locate books efficiently. It takes a database `connection` and allows searching based on various user-defined criteria, such as partial `book_name` or `book_author`. The function queries the database to retrieve and display all matching book records, facilitating quick access to desired titles.
+                        <strong>`find_book_information(connection)`:</strong>{" "}
+                        This is a powerful discovery tool that enables users to
+                        locate books efficiently. It takes a database
+                        `connection` and allows searching based on various
+                        user-defined criteria, such as partial `book_name` or
+                        `book_author`. The function queries the database to
+                        retrieve and display all matching book records,
+                        facilitating quick access to desired titles.
                     </li>
                     <li>
-                        <strong>`view_book_details(connection)`:</strong> Providing a holistic overview of the library&apos;s holdings, this method, given a database `connection`, fetches and displays a neatly formatted list of all books present in the `books` table. This output typically includes all relevant details for each book, offering an easy way to audit the entire collection.
+                        <strong>`view_book_details(connection)`:</strong>{" "}
+                        Providing a holistic overview of the library&apos;s
+                        holdings, this method, given a database `connection`,
+                        fetches and displays a neatly formatted list of all
+                        books present in the `books` table. This output
+                        typically includes all relevant details for each book,
+                        offering an easy way to audit the entire collection.
                     </li>
                     <li>
-                        <strong>`update_book_availability(connection, book_id)`:</strong> Crucial for real-time inventory management, this function updates the `book_current_quantity` for a specific book. This is particularly vital when a book is either returned by a visitor (increasing availability) or declared lost/damaged (decreasing availability), ensuring that the system&apos;s inventory reflects the true count of accessible copies.
+                        <strong>
+                            `update_book_availability(connection, book_id)`:
+                        </strong>{" "}
+                        Crucial for real-time inventory management, this
+                        function updates the `book_current_quantity` for a
+                        specific book. This is particularly vital when a book is
+                        either returned by a visitor (increasing availability)
+                        or declared lost/damaged (decreasing availability),
+                        ensuring that the system&apos;s inventory reflects the
+                        true count of accessible copies.
                     </li>
                     <li>
-                        <strong>`remove_book_from_library_inventory(connection, book_id)`:</strong> This method handles the permanent deletion of a book record from the `books` table. Requiring a database `connection` and the `book_id` of the item to be removed, it includes a critical safeguard: the system checks to ensure that all copies of the book are currently within the library (i.e., not issued out) before allowing the deletion, preventing inconsistencies in inventory and lending records.
+                        <strong>
+                            `remove_book_from_library_inventory(connection,
+                            book_id)`:
+                        </strong>{" "}
+                        This method handles the permanent deletion of a book
+                        record from the `books` table. Requiring a database
+                        `connection` and the `book_id` of the item to be
+                        removed, it includes a critical safeguard: the system
+                        checks to ensure that all copies of the book are
+                        currently within the library (i.e., not issued out)
+                        before allowing the deletion, preventing inconsistencies
+                        in inventory and lending records.
                     </li>
                 </ul>
 
                 {/* Reception Controller - Issue Management */}
-                <h3 className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}>
-                    Reception Controller: Issue Management (`controllers/reception_controller/issue_controller.py`)
+                <h3
+                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                >
+                    Reception Controller: Issue Management
+                    (`controllers/reception_controller/issue_controller.py`)
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed mb-3">
-                    The `issue_controller.py` module is dedicated to managing the circulation of books, encompassing both the issuance and return processes. These functions ensure accurate tracking of borrowed items, financial calculations, and inventory adjustments.
+                    The `issue_controller.py` module is dedicated to managing
+                    the circulation of books, encompassing both the issuance and
+                    return processes. These functions ensure accurate tracking
+                    of borrowed items, financial calculations, and inventory
+                    adjustments.
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
                     <li>
-                        <strong>`create_issue(connection, visitor, book_id, return_date)`:</strong> This is the primary function for initiating a book loan. It requires a database `connection`, the `visitor` object (representing the borrowing patron), the `book_id` of the item being borrowed, and the agreed-upon `return_date`. The function meticulously calculates the total `price` for the loan duration based on the book&apos;s daily issue rate. Furthermore, it intelligently updates the `books_issued` count for the specified `visitor` and decrements the `book_current_quantity` for the `book_id`, maintaining a precise, real-time inventory count.
+                        <strong>
+                            `create_issue(connection, visitor, book_id,
+                            return_date)`:
+                        </strong>{" "}
+                        This is the primary function for initiating a book loan.
+                        It requires a database `connection`, the `visitor`
+                        object (representing the borrowing patron), the
+                        `book_id` of the item being borrowed, and the
+                        agreed-upon `return_date`. The function meticulously
+                        calculates the total `price` for the loan duration based
+                        on the book&apos;s daily issue rate. Furthermore, it
+                        intelligently updates the `books_issued` count for the
+                        specified `visitor` and decrements the
+                        `book_current_quantity` for the `book_id`, maintaining a
+                        precise, real-time inventory count.
                     </li>
                     <li>
-                        <strong>`return_book(connection)`:</strong> This method gracefully handles the process of a book being returned to the library. Given a database `connection`, it identifies the corresponding issue record. It then marks the issue as `cleared`, sets the `return_date` to the current date, and performs necessary updates to both the `visitor` record (decreasing their `books_issued` count) and the `book` record (incrementing its `book_current_quantity`), fully reconciling the loan transaction.
+                        <strong>`return_book(connection)`:</strong> This method
+                        gracefully handles the process of a book being returned
+                        to the library. Given a database `connection`, it
+                        identifies the corresponding issue record. It then marks
+                        the issue as `cleared`, sets the `return_date` to the
+                        current date, and performs necessary updates to both the
+                        `visitor` record (decreasing their `books_issued` count)
+                        and the `book` record (incrementing its
+                        `book_current_quantity`), fully reconciling the loan
+                        transaction.
                     </li>
                 </ul>
 
                 {/* Visitor Controller */}
-                <h3 className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}>
-                    Visitor Controller (`controllers/visitor_controller/visitor_controller.py`)
+                <h3
+                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                >
+                    Visitor Controller
+                    (`controllers/visitor_controller/visitor_controller.py`)
                 </h3>
                 <p className="text-base text-gray-300 leading-relaxed mb-3">
-                    The `visitor_controller.py` module is singularly focused on the management of library patrons. Its functions provide tools for registering, modifying, locating, and auditing all individuals who interact with the library.
+                    The `visitor_controller.py` module is singularly focused on
+                    the management of library patrons. Its functions provide
+                    tools for registering, modifying, locating, and auditing all
+                    individuals who interact with the library.
                 </p>
                 <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
                     <li>
-                        <strong>`add_visitor(connection, visitor_name, visitor_phone, visitor_email, visitor_address)`:</strong> This function is used to enroll new patrons into the library system. It requires a database `connection` and accepts the `visitor_name` (full name), `visitor_phone`, `visitor_email`, and `visitor_address`. A notable feature is its ability to parse the `visitor_name` into distinct first, middle, and last names, enhancing data granularity and search capabilities.
+                        <strong>
+                            `add_visitor(connection, visitor_name,
+                            visitor_phone, visitor_email, visitor_address)`:
+                        </strong>{" "}
+                        This function is used to enroll new patrons into the
+                        library system. It requires a database `connection` and
+                        accepts the `visitor_name` (full name), `visitor_phone`,
+                        `visitor_email`, and `visitor_address`. A notable
+                        feature is its ability to parse the `visitor_name` into
+                        distinct first, middle, and last names, enhancing data
+                        granularity and search capabilities.
                     </li>
                     <li>
-                        <strong>`edit_visitor(connection, visitor_id)`:</strong> To ensure patron records remain accurate, this method allows for the modification of an existing visitor&apos;s details. Provided with a database `connection` and the unique `visitor_id`, it enables updates to any aspect of the patron&apos;s information, from contact details to address.
+                        <strong>`edit_visitor(connection, visitor_id)`:</strong>{" "}
+                        To ensure patron records remain accurate, this method
+                        allows for the modification of an existing
+                        visitor&apos;s details. Provided with a database
+                        `connection` and the unique `visitor_id`, it enables
+                        updates to any aspect of the patron&apos;s information,
+                        from contact details to address.
                     </li>
                     <li>
-                        <strong>`find_visitor_information(connection)`:</strong> An essential utility for staff, this function, given a database `connection`, facilitates the rapid location of visitor records. It supports searching based on various user-inputted terms and fields (e.g., name, phone number), quickly retrieving and displaying relevant patron data.
+                        <strong>`find_visitor_information(connection)`:</strong>{" "}
+                        An essential utility for staff, this function, given a
+                        database `connection`, facilitates the rapid location of
+                        visitor records. It supports searching based on various
+                        user-inputted terms and fields (e.g., name, phone
+                        number), quickly retrieving and displaying relevant
+                        patron data.
                     </li>
                     <li>
-                        <strong>`view_visitor_details(connection)`:</strong> For administrative review and auditing, this method, with a database `connection`, presents a clearly formatted list of all registered visitors. This allows for a comprehensive overview of the library&apos;s patron base.
+                        <strong>`view_visitor_details(connection)`:</strong> For
+                        administrative review and auditing, this method, with a
+                        database `connection`, presents a clearly formatted list
+                        of all registered visitors. This allows for a
+                        comprehensive overview of the library&apos;s patron
+                        base.
                     </li>
                     <li>
-                        <strong>`remove_visitor(connection, visitor_uid)`:</strong> This function enables the permanent removal of a patron&apos;s record from the `visitors` table. It requires a database `connection` and the `visitor_uid` of the patron to be deleted. A critical safety measure is integrated: a visitor can only be removed if they currently have no books issued to them, preventing orphaned lending records and maintaining data integrity.
+                        <strong>
+                            `remove_visitor(connection, visitor_uid)`:
+                        </strong>{" "}
+                        This function enables the permanent removal of a
+                        patron&apos;s record from the `visitors` table. It
+                        requires a database `connection` and the `visitor_uid`
+                        of the patron to be deleted. A critical safety measure
+                        is integrated: a visitor can only be removed if they
+                        currently have no books issued to them, preventing
+                        orphaned lending records and maintaining data integrity.
                     </li>
                 </ul>
             </div>

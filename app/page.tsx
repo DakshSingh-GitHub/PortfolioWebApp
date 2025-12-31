@@ -4,6 +4,7 @@ import ProjectCards from "@/components/pagecomponent/ProjectCards";
 import { classNames } from "@/components/styles";
 
 import Link from "next/link";
+import Image from "next/image";
 
 
 const projectDetails = {

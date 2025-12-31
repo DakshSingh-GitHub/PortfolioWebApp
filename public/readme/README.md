@@ -67,12 +67,12 @@ The application provides a command-line menu to interact with the different mana
 
 The application's logic is separated into several controllers organized by function:
 
-*   **`controllers/admin_controller/`**
+*   `controllers/admin_controller/`
     *   `admin_controller.py`: Manages system users and their roles.
-*   **`controllers/reception_controller/`**
+*   `controllers/reception_controller/`
     *   `book_controller.py`: Contains all functions related to book management.
     *   `issue_controller.py`: Contains all functions related to book issuance and returns.
-*   **`controllers/visitor_controller/`**
+*   `controllers/visitor_controller/`
     *   `visitor_controller.py`: Contains all functions related to visitor management.
 
 ---

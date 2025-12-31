@@ -1,24 +1,32 @@
 /* Add your markdown styles here */
+.markdown-container {
+  color: #e2e8f0;
+}
+
 .markdown-container h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #f1f5f9;
 }
 
 .markdown-container h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #f1f5f9;
 }
 
 .markdown-container h3 {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #f1f5f9;
 }
 
 .markdown-container p {
   margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
 .markdown-container ul {
@@ -41,20 +49,50 @@
   background-color: #2d3748;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
+  color: #a0aec0;
 }
 
 .markdown-container pre {
-  background-color: #2d3748;
+  background-color: #1a202c;
   padding: 1rem;
   border-radius: 0.25rem;
   overflow-x: auto;
+  margin: 1rem 0;
 }
 
 .markdown-container pre code {
   padding: 0;
+  color: #a0aec0;
 }
 
 .markdown-container a {
   color: #63b3ed;
   text-decoration: underline;
 }
+
+.markdown-container blockquote {
+  border-left: 4px solid #63b3ed;
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  color: #cbd5e0;
+}
+
+.markdown-container table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.markdown-container th,
+.markdown-container td {
+  border: 1px solid #4a5568;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.markdown-container th {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+

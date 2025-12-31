@@ -4,7 +4,6 @@ import { classNames } from "@/components/styles";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
 
 import "../../markdown.css";
 
@@ -181,9 +180,9 @@ export default function LibraryManagementPage() {
                 >
                     README.md for LIBRARY MANAGEMENT
                 </h2>
-                <div className="markdown-container">
-                    <ReactMarkdown>{readmeContent}</ReactMarkdown>
-                </div>
+                <pre className="markdown-container bg-gray-800 p-4 rounded overflow-auto max-h-96 text-sm text-gray-300">
+                    {readmeContent}
+                </pre>
             </div>
 
             <div className="text-center my-12">

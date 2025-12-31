@@ -4,7 +4,7 @@ import { classNames } from "@/components/styles";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+
 import "../../markdown.css";
 
 export default function LibraryManagementPage() {
@@ -177,9 +177,7 @@ export default function LibraryManagementPage() {
                     README.md for LIBRARY MANAGEMENT
                 </h2>
                 <div className="markdown-container">
-                    <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                    >
+                    <ReactMarkdown>
                         {readmeContent}
                     </ReactMarkdown>
                 </div>

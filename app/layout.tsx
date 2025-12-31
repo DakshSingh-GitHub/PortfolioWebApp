@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oxanium } from "next/font/google";
+// @ts-expect-error - Importing CSS Module global.css
 import "@/app/globals.css";
 import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";

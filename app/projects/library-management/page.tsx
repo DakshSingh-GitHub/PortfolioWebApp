@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+// @ts-expect-error - Importing CSS Module markdown.css
+import "../../markdown.css";
 
 export default function LibraryManagementPage() {
     const [readmeContent, setReadmeContent] = useState("");
@@ -167,7 +169,7 @@ export default function LibraryManagementPage() {
                 >
                     README.md
                 </h2>
-                <div className="prose prose-invert max-w-none">
+                <div className="markdown-container">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                         {readmeContent}
                     </ReactMarkdown>

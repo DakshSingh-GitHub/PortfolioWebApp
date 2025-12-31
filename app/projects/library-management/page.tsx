@@ -1,7 +1,7 @@
 "use client";
 
 import { classNames } from "@/components/styles";
-import Image from "next/image";
+// import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -35,7 +35,8 @@ export default function LibraryManagementPage() {
             </header>
 
             <div className="flex justify-center my-10">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                     src="/projects/library_management.png"
                     alt="Library Management System CLI"
                     width={800}

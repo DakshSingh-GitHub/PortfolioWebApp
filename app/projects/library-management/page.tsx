@@ -34,17 +34,6 @@ export default function LibraryManagementPage() {
                 </p>
             </header>
 
-            <div className="flex justify-center my-10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                    src="/projects/library_management.png"
-                    alt="Library Management System CLI"
-                    width={800}
-                    height={450}
-                    className={`rounded-lg shadow-2xl border-4 border-purple-500/50 ${classNames.textGlowEffect}`}
-                />
-            </div>
-
             <div
                 className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
             >

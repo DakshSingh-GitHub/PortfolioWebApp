@@ -2,19 +2,24 @@
 
 import { classNames } from "@/components/styles";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 import "../../markdown.css";
 
 export default function LibraryManagementPage() {
+    const pathname = usePathname();
     const [readmeContent, setReadmeContent] = useState("");
 
     useEffect(() => {
-        fetch("/readme/README.md")
+        const basePath = pathname.includes("/portfolio-app")
+            ? "/portfolio-app"
+            : "";
+        fetch(`${basePath}/readme/README.md`)
             .then((response) => response.text())
             .then((text) => setReadmeContent(text));
-    }, []);
+    }, [pathname]);
 
     return (
         <div className="container mx-auto px-6 py-4 text-white">
@@ -32,7 +37,7 @@ export default function LibraryManagementPage() {
 
             <div className="flex justify-center my-10">
                 <Image
-                    src="./projects/library_management.png"
+                    src="/projects/library_management.png"
                     alt="Library Management System CLI"
                     width={800}
                     height={450}
@@ -177,9 +182,7 @@ export default function LibraryManagementPage() {
                     README.md for LIBRARY MANAGEMENT
                 </h2>
                 <div className="markdown-container">
-                    <ReactMarkdown>
-                        {readmeContent}
-                    </ReactMarkdown>
+                    <ReactMarkdown>{readmeContent}</ReactMarkdown>
                 </div>
             </div>
 

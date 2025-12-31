@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-// @ts-expect-error - Importing CSS Module markdown.css
 import "../../markdown.css";
 
 export default function LibraryManagementPage() {
@@ -37,13 +36,15 @@ export default function LibraryManagementPage() {
                     alt="Library Management System CLI"
                     width={800}
                     height={450}
-                    className="rounded-lg shadow-2xl border-4 border-purple-500/50"
+                    className={`rounded-lg shadow-2xl border-4 border-purple-500/50 ${classNames.textGlowEffect}`}
                 />
             </div>
 
-            <div className="bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10">
+            <div
+                className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
+            >
                 <h2
-                    className={`text-3xl font-bold mb-6 ${classNames.spanText}`}
+                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}}`}
                 >
                     Project Overview
                 </h2>
@@ -61,9 +62,11 @@ export default function LibraryManagementPage() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-10 my-10">
-                <div className="bg-gray-900/50 p-6 rounded-lg shadow-lg border border-purple-500/30">
+                <div
+                    className={`bg-gray-900/50 p-6 rounded-lg shadow-lg border border-purple-500/30 ${classNames.boxHoverEffect}`}
+                >
                     <h3
-                        className={`text-2xl font-semibold mb-4 ${classNames.spanText}`}
+                        className={`text-2xl font-semibold mb-4 ${classNames.spanText} ${classNames.textGlowEffect}`}
                     >
                         Core Functionalities
                     </h3>
@@ -111,9 +114,11 @@ export default function LibraryManagementPage() {
                     </ul>
                 </div>
 
-                <div className="bg-gray-900/50 p-6 rounded-lg shadow-lg border border-purple-500/30">
+                <div
+                    className={`bg-gray-900/50 p-6 rounded-lg shadow-lg border border-purple-500/30 ${classNames.boxHoverEffect}`}
+                >
                     <h3
-                        className={`text-2xl font-semibold mb-4 ${classNames.spanText}`}
+                        className={`text-2xl font-semibold mb-4 ${classNames.spanText} ${classNames.textGlowEffect}`}
                     >
                         Technical Deep Dive
                     </h3>
@@ -156,18 +161,20 @@ export default function LibraryManagementPage() {
                             While the base version uses in-memory data, the
                             architecture is designed to be easily adaptable for
                             future enhancements like file handling (CSV, JSON)
-                            or database integration (SQLite) for persistent data
+                            or database integration (MySQL) for persistent data
                             storage.
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div className="bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10">
+            <div
+                className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
+            >
                 <h2
-                    className={`text-3xl font-bold mb-6 ${classNames.spanText}`}
+                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
                 >
-                    README.md
+                    README.md for LIBRARY MANAGEMENT
                 </h2>
                 <div className="markdown-container">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>

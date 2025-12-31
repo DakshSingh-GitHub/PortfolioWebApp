@@ -8,11 +8,11 @@ export default function LibraryManagementPage() {
         <div className="container mx-auto px-6 py-4 text-white">
             <header className="text-center my-12">
                 <h1
-                    className={`text-5xl font-extrabold ${classNames.textGlowEffect}`}
+                    className={`text-3xl sm:text-5xl font-extrabold ${classNames.textGlowEffect}`}
                 >
                     Library Management System
                 </h1>
-                <p className="text-lg text-gray-400 mt-4">
+                <p className="text-lg text-gray-400 mt-4 break-all">
                     A comprehensive CLI-based solution for efficient library
                     operations.
                 </p>
@@ -29,11 +29,11 @@ export default function LibraryManagementPage() {
                 className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
             >
                 <h2
-                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
+                    className={`text-xl sm:text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
                 >
                     Project Overview
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-300 leading-relaxed break-all">
                     The Library Management System is a robust console-based
                     application developed in Python, designed to streamline and
                     automate the essential functions of a library. Born out of a
@@ -51,7 +51,7 @@ export default function LibraryManagementPage() {
                     className={`bg-gray-900/50 p-6 rounded-lg shadow-lg border border-purple-500/30 ${classNames.boxHoverEffect}`}
                 >
                     <h3
-                        className={`text-2xl font-semibold mb-4 ${classNames.spanText} ${classNames.textGlowEffect}`}
+                        className={`text-lg sm:text-2xl font-semibold mb-4 ${classNames.spanText} ${classNames.textGlowEffect}`}
                     >
                         Core Functionalities
                     </h3>
@@ -103,11 +103,11 @@ export default function LibraryManagementPage() {
                     className={`bg-gray-900/50 p-6 rounded-lg shadow-lg border border-purple-500/30 ${classNames.boxHoverEffect}`}
                 >
                     <h3
-                        className={`text-2xl font-semibold mb-4 ${classNames.spanText} ${classNames.textGlowEffect}`}
+                        className={`text-lg sm:text-2xl font-semibold mb-4 ${classNames.spanText} ${classNames.textGlowEffect}`}
                     >
                         Technical Deep Dive
                     </h3>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-gray-300 mb-4 break-all">
                         The application is built entirely in Python, leveraging
                         fundamental data structures and programming concepts.
                     </p>
@@ -157,12 +157,12 @@ export default function LibraryManagementPage() {
                 className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
             >
                 <h2
-                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
+                    className={`text-xl sm:text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
                 >
                     Detailed Project Description: Unleashing the Power of CLI
                     Library Management
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                <p className="text-lg text-gray-300 leading-relaxed mb-4 break-all">
                     The Library Management System is a meticulously crafted
                     command-line interface (CLI) application developed in
                     Python, designed from the ground up to revolutionize the way
@@ -177,11 +177,11 @@ export default function LibraryManagementPage() {
                     reliable MySQL database for persistent data storage.
                 </p>
                 <h3
-                    className={`text-2xl font-semibold mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mb-3 ${classNames.spanText}`}
                 >
                     Book Management: The Heart of the Library
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     At the core of any library is its collection, and this
                     system provides a sophisticated suite of tools for managing
                     every aspect of the book inventory. Librarians can
@@ -207,11 +207,11 @@ export default function LibraryManagementPage() {
                 </p>
 
                 <h3
-                    className={`text-2xl font-semibold mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mb-3 ${classNames.spanText}`}
                 >
                     Visitor Management: Nurturing the Patron Relationship
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     Effective management of library patrons is paramount, and
                     the system offers robust features to facilitate this. New
                     library members can be swiftly <strong>registered</strong>,
@@ -235,11 +235,11 @@ export default function LibraryManagementPage() {
                 </p>
 
                 <h3
-                    className={`text-2xl font-semibold mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mb-3 ${classNames.spanText}`}
                 >
                     Book Issuance: A Seamless Borrowing Experience
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     The core interaction between books and visitors is handled
                     through a streamlined book issuance process. Librarians can
                     easily <strong>issue books to visitors</strong>, linking a
@@ -260,11 +260,11 @@ export default function LibraryManagementPage() {
                 </p>
 
                 <h3
-                    className={`text-2xl font-semibold mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mb-3 ${classNames.spanText}`}
                 >
                     User Management (Admin): Securing and Controlling Access
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     For system administrators, the Library Management System
                     provides powerful tools to manage user accounts and roles,
                     ensuring secure and controlled access. Administrators can{" "}
@@ -293,12 +293,12 @@ export default function LibraryManagementPage() {
                 className={`bg-gray-900/50 p-8 rounded-lg shadow-lg border border-purple-500/30 my-10 ${classNames.boxHoverEffect}`}
             >
                 <h2
-                    className={`text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
+                    className={`text-xl sm:text-3xl font-bold mb-6 ${classNames.spanText} ${classNames.textGlowEffect}`}
                 >
                     API & Method Reference: Unpacking the System&apos;s Core
                     Logic
                 </h2>
-                <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                <p className="text-lg text-gray-300 leading-relaxed mb-4 break-all">
                     This section provides an in-depth breakdown of the Library
                     Management System&apos;s programmatic interface, detailing
                     each critical function available through its controllers.
@@ -309,19 +309,19 @@ export default function LibraryManagementPage() {
 
                 {/* Admin Controller */}
                 <h3
-                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mt-8 mb-3 ${classNames.spanText} break-all`}
                 >
                     Admin Controller
                     (`controllers/admin_controller/admin_controller.py`)
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     The `admin_controller.py` module houses functions
                     responsible for the secure management of system users. These
                     methods provide administrators with the tools necessary to
                     control access, define roles, and maintain user credentials
                     within the system.
                 </p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
+                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4 max-w-full break-all">
                     <li>
                         <strong>`add_users(username)`:</strong> This function is
                         invoked to onboard new administrative or staff users
@@ -408,19 +408,19 @@ export default function LibraryManagementPage() {
 
                 {/* Reception Controller - Book Management */}
                 <h3
-                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mt-8 mb-3 ${classNames.spanText} break-all`}
                 >
                     Reception Controller: Book Management
                     (`controllers/reception_controller/book_controller.py`)
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     The `book_controller.py` module provides a comprehensive set
                     of functions for managing the library&apos;s physical
                     collection. These methods allow staff to maintain an
                     accurate and up-to-date catalog of all books, from
                     acquisition to eventual removal.
                 </p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
+                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4 max-w-full break-all">
                     <li>
                         <strong>
                             `add_book(connection, book_name, book_author,
@@ -498,19 +498,19 @@ export default function LibraryManagementPage() {
 
                 {/* Reception Controller - Issue Management */}
                 <h3
-                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mt-8 mb-3 ${classNames.spanText} break-all`}
                 >
                     Reception Controller: Issue Management
                     (`controllers/reception_controller/issue_controller.py`)
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     The `issue_controller.py` module is dedicated to managing
                     the circulation of books, encompassing both the issuance and
                     return processes. These functions ensure accurate tracking
                     of borrowed items, financial calculations, and inventory
                     adjustments.
                 </p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
+                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4 max-w-full break-all">
                     <li>
                         <strong>
                             `create_issue(connection, visitor, book_id,
@@ -544,18 +544,18 @@ export default function LibraryManagementPage() {
 
                 {/* Visitor Controller */}
                 <h3
-                    className={`text-2xl font-semibold mt-8 mb-3 ${classNames.spanText}`}
+                    className={`text-lg sm:text-2xl font-semibold mt-8 mb-3 ${classNames.spanText} break-all`}
                 >
                     Visitor Controller
                     (`controllers/visitor_controller/visitor_controller.py`)
                 </h3>
-                <p className="text-base text-gray-300 leading-relaxed mb-3">
+                <p className="text-base text-gray-300 leading-relaxed mb-3 break-all">
                     The `visitor_controller.py` module is singularly focused on
                     the management of library patrons. Its functions provide
                     tools for registering, modifying, locating, and auditing all
                     individuals who interact with the library.
                 </p>
-                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
+                <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4 max-w-full break-all">
                     <li>
                         <strong>
                             `add_visitor(connection, visitor_name,

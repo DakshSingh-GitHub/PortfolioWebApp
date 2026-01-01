@@ -22,14 +22,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Meet Daksh Singh | Student",
     description: "Portfolio Website that has been made by me, Daksh Singh, to showcase my profile",
-    icons: {
-        icon: "./daksh/daksh-logo.png",
-    },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="/daksh/daksh-logo.png" />
+                <link rel="shortcut icon" href="/daksh/daksh-logo.png" />
+            </head>
             <body className={` ${oxanium.variable} ${geistSans.variable} ${geistMono.variable} antialiased pt-28`} >
                 <Navbar />
                 {children}

@@ -19,7 +19,7 @@ export default function ProjectCards({ image, text, paragraph, details }: CardPr
                     {details.map((detail, index) => (
                         <li
                             key={index}
-                            className="text-justify list-outside text-wrap list-disc"
+                            className="text-wrap list-disc"
                         >
                             {detail}
                         </li>

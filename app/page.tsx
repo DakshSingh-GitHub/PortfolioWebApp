@@ -3,10 +3,6 @@ import Projects from "./projects/page";
 
 import { classNames } from "@/components/styles";
 
-import Image from "next/image";
-
-
-
 
 export default function Home() {
 

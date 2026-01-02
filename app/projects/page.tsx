@@ -53,7 +53,7 @@ const ProjectDesc = [
         title: "Portfolio",
         desc: "This is the website you are currently on. It's my personal portfolio, built with Next.js and Tailwind CSS, showcasing my projects and skills.",
         href: "projects/portfolio",
-        img: "./daksh/daksh-logo.png",
+        img: "./projects/portfolio.png",
         key: 3,
         details: projectDetails.portfolio,
     }

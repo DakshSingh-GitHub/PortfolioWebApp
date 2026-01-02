@@ -3,16 +3,19 @@
 
 import { classNames } from "@/components/styles";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PortfolioPage() {
     return (
         <div className="container mx-auto px-6 py-4 text-white">
             <header className="text-center my-12">
-                <h1
-                    className={`text-3xl sm:text-5xl font-extrabold ${classNames.textGlowEffect}`}
-                >
-                    My Portfolio Website
-                </h1>
+                <Link href="/">
+                    <h1
+                        className={`text-3xl sm:text-5xl font-extrabold ${classNames.textGlowEffect}`}
+                    >
+                        My Portfolio Website (This Website)
+                    </h1>
+                </Link>
                 <p className="text-lg text-gray-400 mt-4 break-all">
                     A personal portfolio website built with Next.js and Tailwind
                     CSS.
@@ -129,8 +132,8 @@ export default function PortfolioPage() {
                             <span className={classNames.cardparent_list_span}>
                                 Github Pages:
                             </span>{" "}
-                            The website is published on github pages, a platform for
-                            hosting and scaling Next.js applications.
+                            The website is published on github pages, a platform
+                            for hosting and scaling Next.js applications.
                         </li>
                     </ul>
                 </div>
@@ -149,59 +152,62 @@ export default function PortfolioPage() {
                     application, with some customizations to suit the needs of
                     this project.
                 </p>
-                <div className="bg-gray-800 p-4 rounded-lg mt-4 text-white" style={{ whiteSpace: "pre" }}>
-                        <div>/app</div>
-                        <div>|--    /about</div>
-                        <div>|          `-- page.tsx</div>
-                        <div>|--    /contact-me</div>
-                        <div>|          `-- page.tsx</div>
-                        <div>|--    /projects</div>
-                        <div>|          |-- /hotel-management</div>
-                        <div>|          |   `-- page.tsx</div>
-                        <div>|          |-- /library-management</div>
-                        <div>|          |   `-- page.tsx</div>
-                        <div>|          |-- /mathematics-helper</div>
-                        <div>|          |   `-- page.tsx</div>
-                        <div>|          `-- /portfolio</div>
-                        <div>|              `-- page.tsx</div>
-                        <div>|  -- favicon.ico</div>
-                        <div>|  -- globals.css</div>
-                        <div>|  -- layout.tsx</div>
-                        <div>|  -- markdown.css</div>
-                        <div>`  -- page.tsx</div>
-                        <br />
-                        <div>/components</div>
-                        <div>|  -- /global</div>
-                        <div>|     |-- Card.tsx</div>
-                        <div>|     |-- Footer.tsx</div>
-                        <div>|     `-- Navbar.tsx</div>
-                        <div>|  -- /pagecomponent</div>
-                        <div>|     |-- Certificate.tsx</div>
-                        <div>|     |-- HomeCard.tsx</div>
-                        <div>|     |-- ProjectCards.tsx</div>
-                        <div>|     |-- ReachMeOut.tsx</div>
-                        <div>|     `-- /logos</div>
-                        <div>|         `-- Image_Lib.tsx</div>
-                        <div>`  -- styles.tsx</div>
-                        <br />
-                        <div>/public</div>
-                        <div>|  -- /daksh</div>
-                        <div>|     |-- daksh-logo.png</div>
-                        <div>|     `-- daksh.jpg</div>
-                        <div>|  -- /education</div>
-                        <div>|     `-- schl.jpg</div>
-                        <div>|  -- /projects</div>
-                        <div>|     |-- hotel_management.png</div>
-                        <div>|     |-- library_management.png</div>
-                        <div>|     `-- mathshelpjava.png</div>
-                        <div>|  -- /readme</div>
-                        <div>|     `-- README.md</div>
-                        <div>|  -- file.svg</div>
-                        <div>|  -- globe.svg</div>
-                        <div>|  -- next.svg</div>
-                        <div>|  -- vercel.svg</div>
-                        <div>`  -- window.svg</div>
-                    </div>
+                <div
+                    className="bg-gray-800 p-4 rounded-lg mt-4 text-white"
+                    style={{ whiteSpace: "pre" }}
+                >
+                    <div>/app</div>
+                    <div>|-- /about</div>
+                    <div>| `-- page.tsx</div>
+                    <div>|-- /contact-me</div>
+                    <div>| `-- page.tsx</div>
+                    <div>|-- /projects</div>
+                    <div>| |-- /hotel-management</div>
+                    <div>| | `-- page.tsx</div>
+                    <div>| |-- /library-management</div>
+                    <div>| | `-- page.tsx</div>
+                    <div>| |-- /mathematics-helper</div>
+                    <div>| | `-- page.tsx</div>
+                    <div>| `-- /portfolio</div>
+                    <div>| `-- page.tsx</div>
+                    <div>| -- favicon.ico</div>
+                    <div>| -- globals.css</div>
+                    <div>| -- layout.tsx</div>
+                    <div>| -- markdown.css</div>
+                    <div>` -- page.tsx</div>
+                    <br />
+                    <div>/components</div>
+                    <div>| -- /global</div>
+                    <div>| |-- Card.tsx</div>
+                    <div>| |-- Footer.tsx</div>
+                    <div>| `-- Navbar.tsx</div>
+                    <div>| -- /pagecomponent</div>
+                    <div>| |-- Certificate.tsx</div>
+                    <div>| |-- HomeCard.tsx</div>
+                    <div>| |-- ProjectCards.tsx</div>
+                    <div>| |-- ReachMeOut.tsx</div>
+                    <div>| `-- /logos</div>
+                    <div>| `-- Image_Lib.tsx</div>
+                    <div>` -- styles.tsx</div>
+                    <br />
+                    <div>/public</div>
+                    <div>| -- /daksh</div>
+                    <div>| |-- daksh-logo.png</div>
+                    <div>| `-- daksh.jpg</div>
+                    <div>| -- /education</div>
+                    <div>| `-- schl.jpg</div>
+                    <div>| -- /projects</div>
+                    <div>| |-- hotel_management.png</div>
+                    <div>| |-- library_management.png</div>
+                    <div>| `-- mathshelpjava.png</div>
+                    <div>| -- /readme</div>
+                    <div>| `-- README.md</div>
+                    <div>| -- file.svg</div>
+                    <div>| -- globe.svg</div>
+                    <div>| -- next.svg</div>
+                    <div>| -- vercel.svg</div>
+                    <div>` -- window.svg</div>
+                </div>
             </div>
             <div className="text-center my-12">
                 <a

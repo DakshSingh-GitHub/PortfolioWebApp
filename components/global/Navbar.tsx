@@ -75,18 +75,36 @@ export default function Navbar() {
                             About
                         </Link>
                         <div className="relative" ref={dropdownRef}>
-                            <button
-                                onClick={() =>
-                                    setIsDesktopProjectsDropdownOpen(
-                                        !isDesktopProjectsDropdownOpen
-                                    )
-                                }
-                                className={`hover:text-gray-300 ${textGlowEffect}`}
-                            >
-                                Projects
-                            </button>
+                            <div className="flex items-center">
+                                <Link
+                                    href="/projects"
+                                    className={`hover:text-gray-300 ${textGlowEffect}`}
+                                >
+                                    Projects
+                                </Link>
+                                <button
+                                    onClick={() =>
+                                        setIsDesktopProjectsDropdownOpen(
+                                            !isDesktopProjectsDropdownOpen
+                                        )
+                                    }
+                                    className={`ml-1 hover:text-gray-300 ${textGlowEffect}`}
+                                >
+                                    <svg
+                                        className="w-4 h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
                             {isDesktopProjectsDropdownOpen && (
-                                <div className="absolute top-full mt-2 w-56 bg-black/70 backdrop-blur-sm rounded-md shadow-lg">
+                                <div className="absolute top-full mt-2 w-64 bg-black/70 backdrop-blur-sm rounded-md shadow-lg">
                                     <ul>
                                         {projectLinks.map((link) => (
                                             <li key={link.href}>
@@ -164,16 +182,35 @@ export default function Navbar() {
                             About
                         </Link>
                         <div className="relative">
-                            <button
-                                onClick={() =>
-                                    setIsMobileProjectsDropdownOpen(
-                                        !isMobileProjectsDropdownOpen
-                                    )
-                                }
-                                className={`block w-full text-left py-2 ${textGlowEffect}`}
-                            >
-                                Projects
-                            </button>
+                            <div className="flex items-center justify-between">
+                                <Link
+                                    href="/projects"
+                                    className={`block py-2 ${textGlowEffect}`}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Projects
+                                </Link>
+                                <button
+                                    onClick={() =>
+                                        setIsMobileProjectsDropdownOpen(
+                                            !isMobileProjectsDropdownOpen
+                                        )
+                                    }
+                                    className={`py-2 ${textGlowEffect}`}
+                                >
+                                    <svg
+                                        className="w-5 h-5"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
                             {isMobileProjectsDropdownOpen && (
                                 <div className="pl-4">
                                     <ul>

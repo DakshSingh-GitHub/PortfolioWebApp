@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isDesktopProjectsDropdownOpen, setIsDesktopProjectsDropdownOpen] =
@@ -61,8 +62,14 @@ export default function Navbar() {
                 <div className="flex justify-between items-center">
                     <Link
                         href="/"
-                        className={`text-2xl font-bold ${textGlowEffect}`}
+                        className={`text-2xl font-bold ${textGlowEffect} flex gap-3 items-center`}
                     >
+                        <Image
+                            src="./daksh/lui.png"
+                            width={40}
+                            height={40}
+                            alt="Lui Shirosagi Motif"
+                        />
                         Meet Daksh Singh
                     </Link>
 

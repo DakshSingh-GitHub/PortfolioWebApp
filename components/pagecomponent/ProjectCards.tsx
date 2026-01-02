@@ -15,11 +15,11 @@ export default function ProjectCards({ image, text, paragraph, details }: CardPr
                 <hr className="mt-4 mb-4" />
                 <p className="text-center text-wrap">{paragraph}</p>{" "}
                 <hr className="mt-2 mb-2" />
-                <ul>
+                <ul className="px-10">
                     {details.map((detail, index) => (
                         <li
                             key={index}
-                            className="text-center text-wrap list-disc list-inside"
+                            className="text-justify list-outside text-wrap list-disc"
                         >
                             {detail}
                         </li>

@@ -20,7 +20,7 @@ const projectDetails = {
     ],
     mathematicsHelper: [
         "Developed a Java library to assist students with mathematical computations.",
-        "Included classes for various mathematical concepts such as algebra, calculus, and geometry.",
+        "Included classes for various mathematical concepts such as algebra, and geometry.",
         "Provided methods for solving equations, calculating derivatives, and performing matrix operations.",
     ],
 };

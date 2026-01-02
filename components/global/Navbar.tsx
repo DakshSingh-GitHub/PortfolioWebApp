@@ -35,22 +35,22 @@ export default function Navbar() {
     const projectLinks = [
         {
             href: "/projects/library-management",
-            name: "Library Management",
+            name: "Library Management CLI",
             className: "block px-4 py-2 hover:bg-purple-950 rounded-t-md",
         },
         {
-            href: "/projects/portfolio",
-            name: "Portfolio",
+            href: "/projects/mathematics-helper",
+            name: "Mathematics Helper Java",
             className: "block px-4 py-2 hover:bg-purple-950",
         },
         {
-            href: "/projects/mathematics-helper",
-            name: "Mathematics helper",
+            href: "/projects/portfolio",
+            name: "Portfolio (This Website)",
             className: "block px-4 py-2 hover:bg-purple-950",
         },
         {
             href: "/projects/hotel-management",
-            name: "Hotel management",
+            name: "Hotel management (School Project)",
             className: "block px-4 py-2 hover:bg-purple-950 rounded-b-md",
         },
     ];

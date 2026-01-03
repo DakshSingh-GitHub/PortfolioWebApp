@@ -3,7 +3,6 @@ import Projects from "./projects/page";
 
 import { classNames } from "@/components/styles";
 
-
 export default function Home() {
 
     return (
@@ -26,7 +25,7 @@ export default function Home() {
                             from Shri Gulab Rai Montessori school - CBSE Board
                             (2023) -{" "}
                             <span className={`font-bold`}>
-                                89.8% | B5: 95.2%
+                                89.8% | B5: 93.8%
                             </span>
                         </p>
                     </div>

@@ -230,7 +230,7 @@ export default function HotelManagementPage() {
 
             <div className="text-center my-12">
                 <a
-                    href="https://github.com/DakshSingh-GitHub/Hotel-Management-CLI"
+                    href="https://github.com/DakshSingh-GitHub/HotelManagement"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-block bg-purple-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:bg-purple-700 ${classNames.textGlowEffect}`}

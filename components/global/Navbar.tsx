@@ -65,7 +65,7 @@ export default function Navbar() {
                         className={`text-2xl font-bold ${textGlowEffect} flex gap-3 items-center`}
                     >
                         <Image
-                            src="/daksh/lui.png"
+                            src="./daksh/lui.png"
                             width={40}
                             height={40}
                             alt="Lui Shirosagi Motif"

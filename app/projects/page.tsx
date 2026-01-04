@@ -8,7 +8,7 @@ const projectDetails = {
         "Utilized file handling for data storage and retrieval.",
     ],
     libraryManagement: [
-        "Created a command-line interface (CLI) application in Python for library management.",
+        "Created a command-line interface (CLI) application / Also Web Based application in Python for library management.",
         "Implemented functionalities like book issuance, return, and inventory management.",
         "Used data structures to efficiently manage and search for books.",
     ],

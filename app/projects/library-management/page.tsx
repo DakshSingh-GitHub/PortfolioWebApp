@@ -13,8 +13,8 @@ export default function LibraryManagementPage() {
                     Library Management System
                 </h1>
                 <p className="text-lg text-gray-400 mt-4 break-all">
-                    A comprehensive CLI-based solution for efficient library
-                    operations.
+                    A comprehensive CLI-based / Web based (both) solution for
+                    efficient library operations.
                 </p>
             </header>
             <Image
@@ -114,6 +114,12 @@ export default function LibraryManagementPage() {
                     <ul
                         className={`space-y-3 text-gray-300 ${classNames.cardparent_list}`}
                     >
+                        <li>
+                            <span className={classNames.cardparent_list_span}>
+                                Web Application:
+                            </span>{" "}
+                            Web app with a modern design, used for management, with a good UI/UX. Built with Flask, Python Library.
+                        </li>
                         <li>
                             <span className={classNames.cardparent_list_span}>
                                 Data Structures:

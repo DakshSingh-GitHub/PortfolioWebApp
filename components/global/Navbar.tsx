@@ -65,7 +65,7 @@ export default function Navbar() {
                         className={`text-2xl font-bold ${textGlowEffect} flex gap-3 items-center`}
                     >
                         <Image
-                            src="./daksh/lui.png"
+                            src="/daksh/lui.png"
                             width={40}
                             height={40}
                             alt="Lui Shirosagi Motif"
@@ -128,6 +128,12 @@ export default function Navbar() {
                             )}
                         </div>
                         <Link
+                            href="/practice-codes"
+                            className={`hover:text-gray-300 ${textGlowEffect}`}
+                        >
+                            Practice Codes
+                        </Link>
+                        <Link
                             href="/contact-me"
                             className={`hover:text-gray-300 ${textGlowEffect}`}
                         >
@@ -164,7 +170,6 @@ export default function Navbar() {
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
                                         strokeLinecap="round"
@@ -243,6 +248,13 @@ export default function Navbar() {
                                 </div>
                             )}
                         </div>
+                        <Link
+                            href="/practice-codes"
+                            className={`block py-2 ${textGlowEffect}`}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Practice Codes
+                        </Link>
                         <Link
                             href="/contact-me"
                             className={`block py-2 ${textGlowEffect}`}

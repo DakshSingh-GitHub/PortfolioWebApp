@@ -10,6 +10,20 @@ const Repositories = [
         repo_lang: ["JavaScript", "TypeScript", "HTML", "CSS"],
         repo_url: "https://github.com/DakshSingh-GitHub/InterviewQuestions",
     },
+    {
+        repo_key: 2,
+        repo_name: "Python Practice Problems",
+        repo_desc: "A repository containing various Python practice problems and their solutions. This repo helps me improve my problem-solving skills and gain proficiency in Python programming.",
+        repo_lang: ["Python"],
+        repo_url: "https://github.com/DakshSingh-GitHub/PyQuestions",
+    },
+    {
+        repo_key: 3,
+        repo_name: "TypeScript Playground",
+        repo_desc: "A collection of TypeScript code snippets and exercises that I use to practice and learn TypeScript features and concepts. This repository serves as a playground for experimenting with TypeScript code.",
+        repo_lang: ["TypeScript", "JavaScript"],
+        repo_url: "https://github.com/DakshSingh-GitHub/TypeScript",
+    }
 ];
 
 export default function PracticeCodes() {
@@ -41,7 +55,7 @@ export default function PracticeCodes() {
                 </p>
             </div>
             <hr />
-            <div className="repo flex flex-col md:flex-row items-center justify-evenly h-full w-full mt-10 gap-4 md:gap-0">
+            <div className="repo flex flex-col md:flex-row items-center justify-between h-full w-full mt-10 gap-4 md:gap-0">
                 {repo_map}
             </div>
         </div>

@@ -25,14 +25,14 @@ export default function PracticeCodes() {
     ));
 
     return (
-        <div className="practice-code">
-            <div className="head-not my-4">
+        <div className="practice-code p-4 md:p-10 cursor-default">
+            <div className="head-not flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
                 <h1
                     className={`text-center ${classNames.textGlowEffect} text-5xl font-bold`}
                 >
                     Practice Codes
                 </h1>
-                <p className="text-center">
+                <p className="text-sm md:text-lg text-center mt-5 md:text-justify">
                     This section will contain practice codes and exercises.
                     Repositories with practice codes will be linked here. I
                     prefer coding and sharing my progress as I learn the
@@ -41,7 +41,7 @@ export default function PracticeCodes() {
                 </p>
             </div>
             <hr />
-            <div className="repo mx-10 my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="repo flex flex-col md:flex-row items-center justify-evenly h-full w-full mt-10 gap-4 md:gap-0">
                 {repo_map}
             </div>
         </div>

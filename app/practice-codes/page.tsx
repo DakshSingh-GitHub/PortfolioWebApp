@@ -5,7 +5,7 @@ const Repositories = [
     {
         repo_key: 1,
         repo_name: "JavaScript Interview Questions",
-        repo_desc:
+        repo_desc: 
             "A collection of commonly asked JavaScript interview questions with answers and explanations. I practice these questions to enhance my understanding of JavaScript concepts and prepare for technical interviews.",
         repo_lang: ["JavaScript", "TypeScript", "HTML", "CSS"],
         repo_url: "https://github.com/DakshSingh-GitHub/InterviewQuestions",

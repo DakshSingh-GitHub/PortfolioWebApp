@@ -46,7 +46,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
     );
 };
 
-const certificates = [
+const certificates_g1 = [
     {
         title: "Roadmap To Become An AI-Powered Full Stack Developer In 2026",
         issuer: "WSCube Tech",
@@ -65,20 +65,30 @@ const certificates = [
         date: "Issued Sept 2024",
         pdfUrl: "https://drive.google.com/file/d/1Iv5KWxPLjKpw2yfK56lKN6iWkrbiFony/view?usp=sharing",
     },
+    {
+        title: "Build A Career In Full Stack Development In GenAl Era",
+        issuer: "WSCube Tech",
+        date: "Issued Jan 2026",
+        pdfUrl: "https://drive.google.com/file/d/1WEWspv9kzgZhPcPRLcr2c9XxXGfkAr5t/view?usp=sharing",
+    },
 ];
+
+
 
 const Certificate: React.FC = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certificates.map((cert, index) => (
-                <CertificateCard
-                    key={index}
-                    title={cert.title}
-                    issuer={cert.issuer}
-                    date={cert.date}
-                    pdfUrl={cert.pdfUrl}
-                />
-            ))}
+        <div className="">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {certificates_g1.map((cert, index) => (
+                    <CertificateCard
+                        key={index}
+                        title={cert.title}
+                        issuer={cert.issuer}
+                        date={cert.date}
+                        pdfUrl={cert.pdfUrl}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

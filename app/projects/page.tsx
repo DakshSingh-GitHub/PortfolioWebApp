@@ -1,5 +1,9 @@
+"use client";
+
 import ProjectCards from "@/components/pagecomponent/ProjectCards";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { staggerContainer, bounceIn } from "@/components/animations";
 
 const projectDetails = {
     hotelManagement: [
@@ -61,19 +65,25 @@ const ProjectDesc = [
 
 
 export default function Projects() {
-    const Projects = ProjectDesc.map((project) => (
-        <Link key={project.key} href={project.href} className="w-full">
-            <ProjectCards
-                image={project.img}
-                text={project.title}
-                paragraph={project.desc}
-                details={project.details}
-            />
-        </Link>
-    ));
     return (
-        <div className="flex flex-col items-center mt-10 w-full">
-            {Projects}
-        </div>
+        <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-col items-center mt-10 w-full"
+        >
+            {ProjectDesc.map((project) => (
+                <motion.div key={project.key} variants={bounceIn} className="w-full">
+                    <Link href={project.href} className="w-full">
+                        <ProjectCards
+                            image={project.img}
+                            text={project.title}
+                            paragraph={project.desc}
+                            details={project.details}
+                        />
+                    </Link>
+                </motion.div>
+            ))}
+        </motion.div>
     )
 }

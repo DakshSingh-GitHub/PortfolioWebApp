@@ -1,13 +1,21 @@
+"use client";
 
 import Image from "next/image";
-import {classNames} from "@/components/styles";
+import { classNames } from "@/components/styles";
+import { motion } from "framer-motion";
+import { staggerContainer, blurIn, scaleIn } from "@/components/animations";
 
 
 export default function HomeCard() {
     return (
-        <div className="homecard">
+        <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="homecard"
+        >
             <div className="cardparent flex flex-col md:flex-row items-center justify-center h-full">
-                <div className={`${classNames.cardparent_divisions}`}>
+                <motion.div variants={blurIn} className={`${classNames.cardparent_divisions}`}>
                     <h1
                         className={`${classNames.cardparent_division_h1} ${classNames.textGlowEffect} font-sans`}
                     >
@@ -60,18 +68,23 @@ export default function HomeCard() {
                             </span>
                         </li>
                     </ul>
-                </div>
-                <div className={classNames.cardparent_divisions}>
-                    <Image
-                        src="./daksh/daksh.jpg"
-                        width={350}
-                        height={350}
-                        alt="Daksh Singh"
-                        className={`${classNames.textGlowEffect}`}
-                        style={{ borderRadius: 20 }}
-                    />
-                </div>
+                </motion.div>
+                <motion.div variants={scaleIn} className={classNames.cardparent_divisions}>
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        <Image
+                            src="./daksh/daksh.jpg"
+                            width={350}
+                            height={350}
+                            alt="Daksh Singh"
+                            className={`${classNames.textGlowEffect}`}
+                            style={{ borderRadius: 20 }}
+                        />
+                    </motion.div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 }

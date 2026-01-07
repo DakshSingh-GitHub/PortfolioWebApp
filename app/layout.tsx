@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Oxanium } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
+import ParticleBackground from "@/components/ui/ParticleBackground";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     return (
         <html lang="en">
             <body className={` ${oxanium.variable} ${geistSans.variable} ${geistMono.variable} antialiased pt-28`} >
+                <ParticleBackground />
                 <Navbar />
                 {children}
                 <Footer />

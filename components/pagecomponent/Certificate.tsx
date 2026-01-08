@@ -2,6 +2,9 @@
 import React from "react";
 import { classNames } from "../styles";
 import Image from "next/image";
+import Link from "next/link";
+import {motion} from "framer-motion";
+import { bounceIn } from "../animations";
 
 interface CertificateCardProps {
     title: string;
@@ -18,9 +21,9 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
 }) => {
     return (
         <div
-            className={`${classNames.card} bg-gray-900/50 border-purple-500/30 hover:border-purple-500 hover:shadow-purple-500/50`}
+            className={`${classNames.card} bg-gray-900/50 border-purple-500/30 hover:border-purple-500 hover:shadow-purple-500/50 max-h-70 min-h-45`}
         >
-            <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
+            <Link href={pdfUrl} target="_blank" rel="noopener noreferrer">
                 <div className="p-4">
                     <h3
                         className={`text-lg font-bold ${classNames.textGlowEffect}`}
@@ -41,7 +44,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
                         </span>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     );
 };
@@ -80,13 +83,14 @@ const Certificate: React.FC = () => {
         <div className="">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {certificates_g1.map((cert, index) => (
-                    <CertificateCard
-                        key={index}
-                        title={cert.title}
-                        issuer={cert.issuer}
-                        date={cert.date}
-                        pdfUrl={cert.pdfUrl}
-                    />
+                    <motion.div key={index} variants={bounceIn} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <CertificateCard
+                            title={cert.title}
+                            issuer={cert.issuer}
+                            date={cert.date}
+                            pdfUrl={cert.pdfUrl}
+                        />
+                    </motion.div>
                 ))}
             </div>
         </div>

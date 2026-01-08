@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable react-hooks/unsupported-syntax */
 "use client";
 
 import React, { useEffect, useRef } from "react";

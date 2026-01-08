@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { classNames } from "@/components/styles";
 import Card from "@/components/global/Card";
 import ReachMeOut from "@/components/pagecomponent/ReachMeOut";
-import { staggerContainer, blurIn } from "@/components/animations";
+import { staggerContainer, blurIn, bounceIn } from "@/components/animations";
 
 import Certificate from "@/components/pagecomponent/Certificate";
 
@@ -22,14 +22,20 @@ const schoolList = [
 
 export default function AboutPage() {
     const schoolMap = schoolList.map((school) => (
-        <Link key={school.key} href={school.href} target="_blank" className="flex justify-center">
-            <Card
-                image={school.image}
-                text={school.name}
-                paragraph={school.desc}
-                board={true}
-            />
-        </Link>
+        <motion.div key={school.key} variants={bounceIn} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
+            <Link
+                href={school.href}
+                target="_blank"
+                className="flex justify-center"
+            >
+                <Card
+                    image={school.image}
+                    text={school.name}
+                    paragraph={school.desc}
+                    board={true}
+                />
+            </Link>
+        </motion.div>
     ));
 
     return (
@@ -39,7 +45,7 @@ export default function AboutPage() {
             animate="visible"
             className="p-4 md:p-10 cursor-default"
         >
-            <div className="toplevel flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
+            <div className="toplevel overflow-hidden flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
                 <h1
                     className={`${classNames.aboutHeader} ${classNames.textGlowEffect}`}
                 >
@@ -74,7 +80,11 @@ export default function AboutPage() {
                     leveraging my educational foundation to further my skills
                     and contribute meaningfully to the tech community.
                 </motion.p>
-                <motion.div variants={blurIn}>
+                <motion.div
+                    variants={bounceIn}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                >
                     <ReachMeOut />
                 </motion.div>
             </div>

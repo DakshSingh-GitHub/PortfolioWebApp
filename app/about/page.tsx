@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { classNames } from "@/components/styles";
 import Card from "@/components/global/Card";
 import ReachMeOut from "@/components/pagecomponent/ReachMeOut";
+import { staggerContainer, blurIn } from "@/components/animations";
 
 import Certificate from "@/components/pagecomponent/Certificate";
 
@@ -29,14 +33,22 @@ export default function AboutPage() {
     ));
 
     return (
-        <div className="p-4 md:p-10 cursor-default">
+        <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="p-4 md:p-10 cursor-default"
+        >
             <div className="toplevel flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
                 <h1
                     className={`${classNames.aboutHeader} ${classNames.textGlowEffect}`}
                 >
                     Get to know me better :)
                 </h1>
-                <p className="text-sm md:text-lg text-left md:text-justify">
+                <motion.p
+                    variants={blurIn}
+                    className="text-sm md:text-lg text-left md:text-justify"
+                >
                     Since you&apos;ve made it here, I&apos;d like to take this
                     opportunity to share a bit about my educational background.
                     I completed both my Secondary (10th Grade) and Senior
@@ -61,8 +73,10 @@ export default function AboutPage() {
                     technology. I am excited to continue this journey,
                     leveraging my educational foundation to further my skills
                     and contribute meaningfully to the tech community.
-                </p>
-                <ReachMeOut />
+                </motion.p>
+                <motion.div variants={blurIn}>
+                    <ReachMeOut />
+                </motion.div>
             </div>
             <hr />
             <div className="schoolList mt-10 px-2 md:px-0 mb-10">
@@ -86,6 +100,6 @@ export default function AboutPage() {
                     <Certificate />
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

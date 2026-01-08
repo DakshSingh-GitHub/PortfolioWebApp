@@ -1,5 +1,9 @@
+"use client";
+
 import PracticeRepoCard from "@/components/pagecomponent/PracticeRepoCard";
 import { classNames } from "@/components/styles";
+import { motion } from "framer-motion";
+import { staggerContainer, bounceIn } from "@/components/animations";
 
 const Repositories = [
     {
@@ -27,19 +31,13 @@ const Repositories = [
 ];
 
 export default function PracticeCodes() {
-
-    const repo_map = Repositories.map((repo) => (
-        <PracticeRepoCard
-            key={repo.repo_key}
-            repo_url={repo.repo_url}
-            repo_name={repo.repo_name}
-            repo_desc={repo.repo_desc}
-            repo_lang={repo.repo_lang}
-        />
-    ));
-
     return (
-        <div className="practice-code p-4 md:p-10 cursor-default">
+        <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            className="practice-code p-4 md:p-10 cursor-default"
+        >
             <div className="head-not flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
                 <h1
                     className={`text-center ${classNames.textGlowEffect} text-5xl font-bold`}
@@ -56,8 +54,18 @@ export default function PracticeCodes() {
             </div>
             <hr />
             <div className="repo flex flex-col md:flex-row items-center justify-between h-full w-full mt-10 gap-4 md:gap-0">
-                {repo_map}
+                {Repositories.map((repo) => (
+                    <motion.div key={repo.repo_key} variants={bounceIn} className="w-full" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <PracticeRepoCard
+                            repo_url={repo.repo_url}
+                            repo_name={repo.repo_name}
+                            repo_desc={repo.repo_desc}
+                            repo_lang={repo.repo_lang}
+                        />
+                    </motion.div>
+                ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
+

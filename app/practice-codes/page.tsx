@@ -27,6 +27,13 @@ const Repositories = [
         repo_desc: "A collection of TypeScript code snippets and exercises that I use to practice and learn TypeScript features and concepts. This repository serves as a playground for experimenting with TypeScript code.",
         repo_lang: ["TypeScript", "JavaScript"],
         repo_url: "https://github.com/DakshSingh-GitHub/TypeScript",
+    },
+    {
+        repo_key: 4,
+        repo_name: "Flask Learning",
+        repo_desc: "A repository dedicated to learning Flask, a micro web framework for Python. It contains various Flask projects and examples that I work on to understand web development using Flask.",
+        repo_lang: ["Python", "Flask", "HTML", "CSS"],
+        repo_url: "https://github.com/DakshSingh-GitHub/Flask-learning",
     }
 ];
 
@@ -58,7 +65,7 @@ export default function PracticeCodes() {
                 </p>
             </motion.div>
             <hr />
-            <div className="repo flex flex-col md:flex-row items-center justify-between h-full w-full mt-10 gap-4 md:gap-0">
+            <div className="repo flex-col md:flex-row items-center justify-between h-full w-full mt-10 md:gap-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Repositories.map((repo) => (
                     <motion.div
                         key={repo.repo_key}

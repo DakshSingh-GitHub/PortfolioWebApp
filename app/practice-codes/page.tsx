@@ -38,7 +38,12 @@ export default function PracticeCodes() {
             animate="visible"
             className="practice-code p-4 md:p-10 cursor-default"
         >
-            <div className="head-not flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
+            <motion.div
+                className="head-not flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2 }}
+            >
                 <h1
                     className={`text-center ${classNames.textGlowEffect} text-5xl font-bold`}
                 >
@@ -51,11 +56,17 @@ export default function PracticeCodes() {
                     concepts, Hence, I like to share the codes on which I
                     practice.
                 </p>
-            </div>
+            </motion.div>
             <hr />
             <div className="repo flex flex-col md:flex-row items-center justify-between h-full w-full mt-10 gap-4 md:gap-0">
                 {Repositories.map((repo) => (
-                    <motion.div key={repo.repo_key} variants={bounceIn} className="w-full" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <motion.div
+                        key={repo.repo_key}
+                        variants={bounceIn}
+                        className="w-full"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
                         <PracticeRepoCard
                             repo_url={repo.repo_url}
                             repo_name={repo.repo_name}

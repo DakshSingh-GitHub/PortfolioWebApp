@@ -4,6 +4,8 @@ import { useState } from "react";
 import { classNames } from "@/components/styles";
 import ReachMeOut from "@/components/pagecomponent/ReachMeOut";
 
+import { motion } from "framer-motion";
+
 export default function ContactMePage() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -30,24 +32,35 @@ export default function ContactMePage() {
     return (
         <div className="p-4 md:p-10 cursor-default">
             <div className="toplevel flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">
-                <h1
-                    className={`${classNames.aboutHeader} ${classNames.textGlowEffect}`}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
                 >
-                    Contact Me
-                </h1>
-                <p className="text-sm md:text-lg text-center md:text-justify">
-                    I&apos;m always open to discussing new projects, creative
-                    ideas, or opportunities to be part of an amazing team. Feel
-                    free to reach out to me through the form below or connect
-                    with me on social media. {" "}
-                    <span
-                        className={`${classNames.spanText} ${classNames.textGlowEffect}`}
+                    <h1
+                        className={`${classNames.aboutHeader} ${classNames.textGlowEffect}`}
                     >
-                        My Contact handles are always open for good vibes :)
-                    </span>
-                </p>
+                        Contact Me
+                    </h1>
+                    <p className="text-sm md:text-lg text-center md:text-justify">
+                        I&apos;m always open to discussing new projects,
+                        creative ideas, or opportunities to be part of an
+                        amazing team. Feel free to reach out to me through the
+                        form below or connect with me on social media.{" "}
+                        <span
+                            className={`${classNames.spanText} ${classNames.textGlowEffect}`}
+                        >
+                            My Contact handles are always open for good vibes :)
+                        </span>
+                    </p>
+                </motion.div>
 
-                <div className="contact-form w-full max-w-lg mt-10">
+                <motion.div
+                    className="contact-form w-full max-w-lg mt-10"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                >
                     <form
                         onSubmit={sendEmail}
                         className="bg-gray-900/50 border border-purple-500/30 rounded-lg shadow-lg p-8 space-y-6 transition-all duration-300 ease-in-out hover:shadow-purple-500/50 hover:border-purple-500"
@@ -132,7 +145,7 @@ export default function ContactMePage() {
                             <p className="text-center mt-4">{statusMessage}</p>
                         )}
                     </form>
-                </div>
+                </motion.div>
             </div>
             <hr />
             <div className="flex flex-col items-center w-full md:w-3/4 mx-auto pb-10 px-2 md:px-0">

@@ -2,6 +2,7 @@
 
 import ProjectCards from "@/components/pagecomponent/ProjectCards";
 import Link from "next/link";
+
 import { motion } from "framer-motion";
 import { staggerContainer, bounceIn } from "@/components/animations";
 
@@ -25,7 +26,12 @@ const projectDetails = {
         "A personal portfolio website built with Next.js and Tailwind CSS.",
         "Showcases my skills and projects in an organized manner.",
         "Features a responsive design for optimal viewing on all devices.",
-    ]
+    ],
+    projectJudge: [
+        "Developing a Code Judge using flask and react for analysis of codes",
+        "Implemented Basic API fetching, and code execution environment.",
+        "Integration of a scoring system to streamline the evaluation process will be added soon",
+    ],
 };
 
 const ProjectDesc = [
@@ -60,6 +66,14 @@ const ProjectDesc = [
         img: "./projects/portfolio.png",
         key: 3,
         details: projectDetails.portfolio,
+    },
+    {
+        title: "Code Judge (In Development)",
+        desc: "A web-based code judge system built with Flask and React, designed to evaluate and score programming assignments efficiently. (IN DEVELOPMENT)",
+        href: "projects/project-judge",
+        img: "./projects/code_judge.png",
+        key: 4,
+        details: projectDetails.projectJudge,
     }
 ];
 

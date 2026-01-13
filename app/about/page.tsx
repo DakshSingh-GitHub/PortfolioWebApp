@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 
+import { staggerContainer, blurIn, bounceIn } from "@/components/animations";
+import { motion } from "framer-motion";
 import { classNames } from "@/components/styles";
+
 import Card from "@/components/global/Card";
 import ReachMeOut from "@/components/pagecomponent/ReachMeOut";
-import { staggerContainer, blurIn, bounceIn } from "@/components/animations";
-
 import Certificate from "@/components/pagecomponent/Certificate";
+
 
 const schoolList = [
     {

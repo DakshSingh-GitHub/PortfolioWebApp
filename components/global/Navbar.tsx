@@ -54,6 +54,11 @@ export default function Navbar() {
             name: "Hotel management (School Project)",
             className: "block px-4 py-2 hover:bg-purple-950 rounded-b-md",
         },
+        {
+            href: "/projects/code-judge",
+            name: "Code Judge (In Development)",
+            className: "block px-4 py-2 hover:bg-purple-950 rounded-b-md",
+        },
     ];
 
     return (
@@ -65,10 +70,11 @@ export default function Navbar() {
                         className={`text-2xl font-bold ${textGlowEffect} flex gap-3 items-center`}
                     >
                         <Image
-                            src="./daksh/lui.png"
+                            src="https://i.pinimg.com/736x/0d/00/60/0d00602699272d50087f09e99ae8a764.jpg"
                             width={40}
                             height={40}
                             alt="Lui Shirosagi Motif"
+                            className="rounded-full"
                         />
                         Meet Daksh Singh
                     </Link>

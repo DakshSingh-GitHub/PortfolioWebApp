@@ -1,9 +1,11 @@
 "use client";
+
 import React from "react";
-import { classNames } from "../styles";
 import Image from "next/image";
 import Link from "next/link";
-import {motion} from "framer-motion";
+
+import { classNames } from "../styles";
+import { motion } from "framer-motion";
 import { bounceIn } from "../animations";
 
 interface CertificateCardProps {

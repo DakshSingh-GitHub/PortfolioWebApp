@@ -36,12 +36,12 @@ const projectDetails = {
 
 const ProjectDesc = [
     {
-        title: "Hotel Management",
-        desc: "Python Application, Single Filed, for a software of Hotel Management, This was made as my school project during my 12th Grade",
-        href: "projects/hotel-management",
-        img: "./projects/hotel_management.png",
-        key: 0,
-        details: projectDetails.hotelManagement,
+        title: "Code Judge (In Development)",
+        desc: "A web-based code judge system built with Flask and React, designed to evaluate and score programming assignments efficiently. (IN DEVELOPMENT)",
+        href: "projects/code-judge",
+        img: "./projects/code_judge.png",
+        key: 4,
+        details: projectDetails.projectJudge,
     },
     {
         title: "Library Management",
@@ -50,6 +50,14 @@ const ProjectDesc = [
         img: "./projects/library_management.png",
         key: 1,
         details: projectDetails.libraryManagement,
+    },
+    {
+        title: "Hotel Management",
+        desc: "Python Application, Single Filed, for a software of Hotel Management, This was made as my school project during my 12th Grade",
+        href: "projects/hotel-management",
+        img: "./projects/hotel_management.png",
+        key: 0,
+        details: projectDetails.hotelManagement,
     },
     {
         title: "Mathematics Helper",
@@ -67,14 +75,6 @@ const ProjectDesc = [
         key: 3,
         details: projectDetails.portfolio,
     },
-    {
-        title: "Code Judge (In Development)",
-        desc: "A web-based code judge system built with Flask and React, designed to evaluate and score programming assignments efficiently. (IN DEVELOPMENT)",
-        href: "projects/project-judge",
-        img: "./projects/code_judge.png",
-        key: 4,
-        details: projectDetails.projectJudge,
-    }
 ];
 
 

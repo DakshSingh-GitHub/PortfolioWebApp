@@ -35,6 +35,11 @@ export default function Navbar() {
 
     const projectLinks = [
         {
+            href: "/projects/code-judge",
+            name: "Code Judge (In Development)",
+            className: "block px-4 py-2 hover:bg-purple-950 rounded-b-md",
+        },
+        {
             href: "/projects/library-management",
             name: "Library Management CLI",
             className: "block px-4 py-2 hover:bg-purple-950 rounded-t-md",
@@ -52,11 +57,6 @@ export default function Navbar() {
         {
             href: "/projects/hotel-management",
             name: "Hotel management (School Project)",
-            className: "block px-4 py-2 hover:bg-purple-950 rounded-b-md",
-        },
-        {
-            href: "/projects/code-judge",
-            name: "Code Judge (In Development)",
             className: "block px-4 py-2 hover:bg-purple-950 rounded-b-md",
         },
     ];
